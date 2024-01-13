@@ -1,0 +1,79 @@
+/* Basic styling */
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 250%;
+    background-color: rgb(105, 193, 196);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    color: #080808;
+}
+
+header {
+    background-color: rgb(133, 156, 156);
+    background-position: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: url(images/headerBackground.jpg);
+    background-size: cover;
+}
+
+.top-header {
+    text-align: center;
+}
+
+.top-header img {
+    border-radius: 25%;
+    width: 180px; /* Adjust the size as needed */
+    height: 180px; /* Adjust the size as needed */
+    object-fit: cover;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 2px;
+}
+
+.navbar ul li button{
+    outline-style: solid;
+    outline-color: rgb(105, 193, 196);
+}
+
+.navbar ul li button a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color 3s ease;
+}
+
+.navbar ul li button a:hover {
+    color: rgb(105, 193, 196)/* Change to your preferred hover color */
+}
+
+main {
+    background-image: url(images/MainBack.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
