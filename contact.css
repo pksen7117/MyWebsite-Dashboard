@@ -57,11 +57,21 @@ header {
     font-size: 125%;
     font-weight: bolder;
     border-radius: 25%;
-    transition: color 0.5s ease;
+    transition: color 1s ease;
 }
 
 .navbar ul li a:hover {
-    color: #2c8105;
+    color: #fc7405;
+}
+
+.navbar div ul li a {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.navbar div ul li a:hover {
+    animation: scaleUp 0.3s ease-in-out; /* Apply the animation on hover */
+    transform: scale(1.5);
 }
 
 main {
