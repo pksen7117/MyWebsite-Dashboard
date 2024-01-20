@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>PROFILE</title>
+    <title>MY PROFILE</title>
     <link rel="stylesheet" href="profile.css">
 </head>
 
@@ -15,7 +15,6 @@
             <nav class="navbar">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="projects.html">ABOUT FAMILY</a></li>
             </ul>
         </nav></div>
     </header>
@@ -35,7 +34,21 @@
             <br><br>It's a pleasure to meet you here!!
             <br><br>
         </div>
-        <br><br><br><br><br><br>
+        <br>
+        <div class="expandable-container">
+            <button class="toggle-button" onclick="toggleText()">More Details</button>
+            <div class="expandable-text" id="expandableText">
+                <p>Father's name: Mr. Lokesh Kumar Sen</p>
+                <p>Mother's name: Mrs. Seema Sen</p>
+                <p>Date of Birth: August 07, 1999</p>
+                <p>Religion: Hindu</p>
+                <p>Gender: Male</p>
+                <p>Marital Status: Single</p>
+                <p>Permanent Address: Ajmer, Rajasthan</p>
+                <p>Current Address: Jaipur, Rajasthan</p>
+            </div>
+          </div>
+        <br><br><br><br><br>
     </main>
 
     <footer>
@@ -56,7 +69,7 @@
         <p>&copy; 2024 Pradeep Sen</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="profile.js"></script>
 </body>
 
 </html>

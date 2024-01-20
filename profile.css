@@ -65,11 +65,12 @@ header {
 }
 
 main {
-    background-image: url(images/B2.jpg);
+    background-image: url(images/A2.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 30px;
     padding: 20px;
+    text-align: justify;
 }
 
 main div{
@@ -88,3 +89,29 @@ footer {
     width: 97.8%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.expandable-container {
+    max-width: 90%; /* Adjust the maximum width as needed */
+  }
+  
+  .toggle-button {
+    background-color: #42a017;
+    font-weight: bolder;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+  }
+  
+  .expandable-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  
+  .expandable-text.expanded {
+    max-height: 1000px; /* Adjust the maximum height as needed */
+  }
+  
