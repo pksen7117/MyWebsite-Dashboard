@@ -1,20 +1,54 @@
-const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"];
-let currentImageIndex = 0;
+let currentIndex = 0;
+const carousel = document.querySelector('.certification-carousel');
+const images = document.querySelectorAll('.certification-carousel img');
 
-function showImage(index) {
-  const imageContainer = document.querySelector('.image-container img');
-  imageContainer.src = images[index];
+document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('keydown', handleKeyPress);
+    document.addEventListener('mousedown', handleTouchStart);
+    document.addEventListener('mouseup', handleTouchEnd);
+});
+
+function handleKeyPress(event) {
+    if (event.key === 'ArrowLeft') {
+        showPreviousImage();
+    } else if (event.key === 'ArrowRight') {
+        showNextImage();
+    }
 }
 
-function nextImage() {
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  showImage(currentImageIndex);
+let startX = 0;
+let endX = 0;
+
+function handleTouchStart(event) {
+    startX = event.clientX;
 }
 
-function prevImage() {
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-  showImage(currentImageIndex);
+function handleTouchEnd(event) {
+    endX = event.clientX;
+    handleSwipe();
 }
 
-// Show the first image when the page loads
-showImage(currentImageIndex);
+function handleSwipe() {
+    const threshold = 50;
+
+    if (startX - endX > threshold) {
+        showNextImage();
+    } else if (endX - startX > threshold) {
+        showPreviousImage();
+    }
+}
+
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+}
+
+function showPreviousImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const translateValue = -currentIndex * 100;
+    carousel.style.transform = `translateX(${translateValue}vw)`;
+}
