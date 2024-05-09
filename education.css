@@ -126,3 +126,20 @@ footer {
   border-radius: 10px;
   object-fit: cover;
 }
+
+.justified-text {
+  text-align: justify;
+}
+
+button {
+  background-color: #075200;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #03a10b93;
+}
